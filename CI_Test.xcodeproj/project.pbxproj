@@ -13,6 +13,7 @@
 		406CCAA41F7CF9AC007F91B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406CCAA31F7CF9AC007F91B6 /* Assets.xcassets */; };
 		406CCAA71F7CF9AC007F91B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406CCAA51F7CF9AC007F91B6 /* LaunchScreen.storyboard */; };
 		406CCAAA1F7CF9AC007F91B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCAA91F7CF9AC007F91B6 /* main.m */; };
+		8D3D6A797F85330B819D5CB4 /* libPods-CI_Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8433E3B48389B4EC97466C43 /* libPods-CI_Test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		406CCAA61F7CF9AC007F91B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		406CCAA81F7CF9AC007F91B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		406CCAA91F7CF9AC007F91B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62FF412591727F03B3CD7CE2 /* Pods-CI_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CI_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CI_Test/Pods-CI_Test.debug.xcconfig"; sourceTree = "<group>"; };
+		8433E3B48389B4EC97466C43 /* libPods-CI_Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CI_Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94148A9521F4B582980A9103 /* Pods-CI_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CI_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-CI_Test/Pods-CI_Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3D6A797F85330B819D5CB4 /* libPods-CI_Test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				406CCA991F7CF9AC007F91B6 /* CI_Test */,
 				406CCA981F7CF9AC007F91B6 /* Products */,
+				EDFD79B0B3799DCEBA78A7EE /* Pods */,
+				ADF7EF51B53445650A4CB0FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = CI_Test;
 			sourceTree = "<group>";
 		};
+		ADF7EF51B53445650A4CB0FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8433E3B48389B4EC97466C43 /* libPods-CI_Test.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDFD79B0B3799DCEBA78A7EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62FF412591727F03B3CD7CE2 /* Pods-CI_Test.debug.xcconfig */,
+				94148A9521F4B582980A9103 /* Pods-CI_Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 406CCAAD1F7CF9AC007F91B6 /* Build configuration list for PBXNativeTarget "CI_Test" */;
 			buildPhases = (
+				9C638077FFEDB74C7FD1AAFD /* [CP] Check Pods Manifest.lock */,
 				406CCA931F7CF9AC007F91B6 /* Sources */,
 				406CCA941F7CF9AC007F91B6 /* Frameworks */,
 				406CCA951F7CF9AC007F91B6 /* Resources */,
+				D00008776CF246F6D27BCB6C /* [CP] Embed Pods Frameworks */,
+				921818ECCEB8BAADAB07C0E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		921818ECCEB8BAADAB07C0E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CI_Test/Pods-CI_Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C638077FFEDB74C7FD1AAFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D00008776CF246F6D27BCB6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CI_Test/Pods-CI_Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		406CCA931F7CF9AC007F91B6 /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		406CCAAE1F7CF9AC007F91B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62FF412591727F03B3CD7CE2 /* Pods-CI_Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +367,7 @@
 		};
 		406CCAAF1F7CF9AC007F91B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94148A9521F4B582980A9103 /* Pods-CI_Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
